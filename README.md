@@ -5,5 +5,7 @@ Uses:
   flask-socket
   angularjs
   socket.io
-  rethinkdb
+  
+  No database at the moment but the most ideal would be rethinkdb or couchdb
+  
 
