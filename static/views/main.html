@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="chat-area">
+            <div class="chat-header">
+                <h3 class="center">My Chat App</h3>
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your name" ng-change="setIndentity()" ng-model="userName">
+                    <p ng-if="userName.length > 0">{{salute}}</p>
+                </div>
+            </div>
+            <div class="chat-body" id="pane">
+                <div ng-repeat="chat in allChat">
+                    <div>
+                        <p><b>{{chat.user}}</b></p>
+                        <span>{{chat.msg}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <div class="input-field">
+                    <textarea class="materialize-textarea" placeholder="Message here" ng-model="message"></textarea>
+                    <button class="btn" ng-click="sendChat()" ng-disabled="!userName">Send</button><span style="margin-left:10px;" class="teal-text">status here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
